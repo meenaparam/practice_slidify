@@ -3,7 +3,7 @@ title       : Practising slidify
 subtitle    : 
 author      : Meenakshi Parameshwaran
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : io2012        # {io2012, html5slides, shower, dzslides, landslide, Slidy ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -39,10 +39,12 @@ What is $x^2$ when $x$ is 9?
 
 *** .explanation When $x$ is 9, $x^2$ is $9^2$, which is $9 times 9$.
 
+
 ---
+
 ## Interactive Chart
 
-``{r echo = F, results = 'asis'}
+```{r echo = F, results = 'asis'}
 require(rCharts)
 haireye = as.data.frame(HairEyeColor)
 n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
