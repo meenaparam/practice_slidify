@@ -7,3 +7,6 @@ slidify
 knitr
 shiny
 slidifyLibraries
+ggplot2
+plotly
+XML

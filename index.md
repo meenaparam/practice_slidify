@@ -21,7 +21,7 @@ knit        : slidify::knit2slides
 
 --- &radio
 
-## Question 1
+## Example quiz question
 
 What is $x^2$ when $x$ is 9?
 
@@ -38,7 +38,7 @@ When $x$ is 9, $x^2$ is $9^2$, which is $9 \times 9$.
 
 ---
 
-## Interactive Chart
+## Interactive chart - rCharts
 
 
 <div id = 'chart1' class = 'rChart nvd3'></div>
@@ -205,11 +205,20 @@ When $x$ is 9, $x^2$ is $9^2$, which is $9 \times 9$.
 </script>
 
 --- &interactive
-## Interactive Console
+## Interactive console chart - google charts
+
+Press the play button.
 
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>require(googleVis)
 M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
 print(M1, tag = 'chart')</textarea>
 
+---
+
+## Interactive chart - Plot.Ly
+
+
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~mparam83/14.embed?share_key=jfRsrcGEtejXuix1Ej7fJi"></iframe>
 
 
