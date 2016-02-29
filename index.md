@@ -6,16 +6,18 @@ job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, landslide, Slidy ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [mathjax, quiz, bootstrap, shiny]
+widgets     : [mathjax, quiz, bootstrap, shiny, interactive]
 ext_widgets:: {rCharts: [libraries/nvd3]}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
 --- .class #id 
 
-## Slide 2
+## Making a list
 
-Some practice stuff
+- Something
+- Something else
+- Something else again
 
 --- &radio
 
@@ -202,6 +204,12 @@ When $x$ is 9, $x^2$ is $9^2$, which is $9 \times 9$.
     };
 </script>
 
+--- &interactive
+## Interactive Console
+
+<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>require(googleVis)
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+print(M1, tag = 'chart')</textarea>
 
 
 

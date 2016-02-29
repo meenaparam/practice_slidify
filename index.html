@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
 <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
 <link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
 <link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
 <link rel=stylesheet href="./assets/css/ribbons.css"></link>
@@ -51,10 +52,14 @@
     <!-- SLIDES -->
     <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Making a list</h2>
   </hgroup>
   <article data-timings="">
-    <p>Some practice stuff</p>
+    <ul>
+<li>Something</li>
+<li>Something else</li>
+<li>Something else again</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -267,13 +272,57 @@
   <!-- Presenter Notes -->
 </slide>
 
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Interactive Console</h2>
+  </hgroup>
+  <article data-timings="">
+     
+<div class='row-fluid'>
+  <div class='span5'>
+    <form id="knitForm4" data-cell="4">
+      <p><textarea class='interactive' id='interactive4' data-cell='4' data-results='asis' style='display:none'>require(googleVis)
+M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
+print(M1, tag = &#39;chart&#39;)</textarea></p>
+
+      <div id='aceeditor4' style="height:px;"></div>
+      <div class='interactive btn-toolbar pull-left'>
+        <div class='btn-group'>
+          <a class='btn btn-small action-button' id='runCode4' data-action='runCode'
+            data-cell='4' rel='tooltip' data-title='Run Code'>
+            <i class='icon-play'></i>
+          </a>
+          <a class='btn btn-small iBtn' id='testCode4' data-action='testCode'
+             data-cell='4' rel='tooltip' data-title='Test Code'>
+            <i class='icon-check'></i>
+          </a>
+          <a class='btn btn-small iBtn' id='clearResult4' data-action='clearResult'
+             data-cell='4' rel='tooltip' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='btn  btn-small iBtn' id='getHint4' rel='tooltip' 
+            data-title="Get Hint" data-action='getHint'
+            data-cell='4' data-hint="">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div>
+      </div>    </form>
+  </div>
+  <div class='span7'>
+    <iframe id="knitResult4" class='shiny-html-output'></iframe>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Slide 2'>
+        data-slide=1 title='Making a list'>
          1
       </a>
     </li>
@@ -287,6 +336,12 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=3 title='Interactive Chart'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Interactive Console'>
+         4
       </a>
     </li>
   </ul>
@@ -303,6 +358,9 @@
 <script src="libraries/widgets/quiz/js/quiz-app.js"></script>
 <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
 <script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/opencpu-0.5.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
 
   <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
   <script type="text/x-mathjax-config">

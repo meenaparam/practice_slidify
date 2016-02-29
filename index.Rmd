@@ -6,16 +6,18 @@ job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, landslide, Slidy ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : [mathjax, quiz, bootstrap, shiny]
+widgets     : [mathjax, quiz, bootstrap, shiny, interactive]
 ext_widgets:: {rCharts: [libraries/nvd3]}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
 --- .class #id 
 
-## Slide 2
+## Making a list
 
-Some practice stuff
+- Something
+- Something else
+- Something else again
 
 --- &radio
 
@@ -47,6 +49,14 @@ n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
 n1$print('chart1')
 ```
 
+--- &interactive
+## Interactive Console
+
+```{r opts.label = 'interactive', results = 'asis'}
+require(googleVis)
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+print(M1, tag = 'chart')
+```
 
 
 

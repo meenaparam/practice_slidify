@@ -1,13 +1,9 @@
 base
-methods
-datasets
-utils
-grDevices
-graphics
-stats
 devtools
 rCharts
 rMaps
 RJSONIO
 slidify
 knitr
+shiny
+slidifyLibraries
