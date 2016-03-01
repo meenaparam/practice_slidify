@@ -26,13 +26,13 @@
             <div class='container'>
               <input id='slider' type='range' min=1960 max=2010 ng-model='year' width=200>
               <span ng-bind='year'></span>
-              <div id='chart1c068e0dd5' class='rChart datamaps'></div>          
+              <div id='chart1c01eaaeb25' class='rChart datamaps'></div>          
             </div>
             <script>
               function rChartsCtrl($scope){
                 $scope.year = 1960;
                 $scope.$watch('year', function(newYear){
-                  mapchart1c068e0dd5.updateChoropleth(chartParams.newData[newYear]);
+                  mapchart1c01eaaeb25.updateChoropleth(chartParams.newData[newYear]);
                 })
               }
            </script>    
@@ -41,7 +41,7 @@
 </script>
 <script>
   var chartParams = {
- "dom": "chart1c068e0dd5",
+ "dom": "chart1c01eaaeb25",
 "width":    800,
 "height":    400,
 "scope": "usa",
@@ -15725,27 +15725,27 @@
 "fillKey": "(9.5,159]" 
 } 
 },
-"id": "chart1c068e0dd5" 
+"id": "chart1c01eaaeb25" 
 }
-  chartParams.element = document.getElementById('chart1c068e0dd5')
+  chartParams.element = document.getElementById('chart1c01eaaeb25')
   
   
-  var mapchart1c068e0dd5 = new Datamap(chartParams);
+  var mapchart1c01eaaeb25 = new Datamap(chartParams);
   
   
     
   // draw a bubble map if specified
   if (chartParams.bubbles) {
     var bubbles = chartParams.bubbles
-    mapchart1c068e0dd5.bubbles(bubbles)
+    mapchart1c01eaaeb25.bubbles(bubbles)
   }
   
   if (chartParams.labels){
-    mapchart1c068e0dd5.labels()
+    mapchart1c01eaaeb25.labels()
   }
   
   if (chartParams.legend){
-    mapchart1c068e0dd5.legend()
+    mapchart1c01eaaeb25.legend()
   }
   
   setProjection = function( element, options ) {

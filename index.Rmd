@@ -86,7 +86,7 @@ print(M1, tag = 'chart')
 
 ## Interactive rMap
 
-```{r comment = NA, results = 'asis'}
+```{r comment = NA, results = 'asis', echo = FALSE}
 require(rMaps)
 ichoropleth(Crime ~ State, data = violent_crime, animate = "Year")
 ```

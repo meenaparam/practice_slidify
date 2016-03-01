@@ -246,13 +246,7 @@ print(M1, tag = 'chart')</textarea>
 
 ## Interactive rMap
 
-
-```r
-require(rMaps)
-ichoropleth(Crime ~ State, data = violent_crime, animate = "Year")
-```
-
-<iframe src=' assets/fig/unnamed-chunk-4-1.html ' scrolling='no' frameBorder='0' seamless class='rChart datamaps ' id=iframe- chart1c068e0dd5 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<iframe src=' assets/fig/unnamed-chunk-4-1.html ' scrolling='no' frameBorder='0' seamless class='rChart datamaps ' id=iframe- chart1c01eaaeb25 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 ---
 
