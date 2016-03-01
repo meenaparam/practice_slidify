@@ -13,6 +13,15 @@ knit        : slidify::knit2slides
 
 --- .class #id 
 
+```{r load libraries, echo = FALSE}
+library(slidify)
+library(slidifyLibraries)
+library(knitr)
+library(rCharts)
+suppressPackageStartupMessages(library(googleVis))
+library(shiny)
+```
+
 ## Making a list
 
 - Something
@@ -49,6 +58,20 @@ n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
 n1$print('chart1')
 ```
 
+```{r opts.label = 'shiny'}
+slidifyUI(
+  sidebarPanel(
+    selectInput('sex', 'Choose Sex', c('Male', 'Female')),
+    selectInput('type', 'Choose Type',
+      c('multiBarChart', 'multiBarHorizontalChart')
+    )
+  ),
+  mainPanel(
+    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
+  )
+)
+```
+
 --- &interactive
 ## Interactive console chart - google charts
 
@@ -63,8 +86,12 @@ print(M1, tag = 'chart')
 ---
 
 ## Interactive chart - Plot.Ly
+A bit slow to load...
 
 ```{r makeplotly, echo = FALSE, warning = FALSE}
+
+# a way to do it without posting the figure to Plotly first
+
 #library(plotly)
 #p1 <- plot_ly(midwest, x = percollege, color = state, type = "box")
 # saveWidget(dplot, 'plotlyex1.html')
@@ -72,7 +99,8 @@ print(M1, tag = 'chart')
 ```
 
 ```{r showplotly, echo=FALSE, warning=FALSE, cache=FALSE, results='asis'}
+# get the embed code from the plotly share button for the figure
 cat('<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~mparam83/14.embed?share_key=jfRsrcGEtejXuix1Ej7fJi"></iframe>')
 ```
 
-
+` # to compile the slidedeck, use runDeck(). To publish, use publish_github'

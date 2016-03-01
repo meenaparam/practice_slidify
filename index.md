@@ -13,6 +13,8 @@ knit        : slidify::knit2slides
 
 --- .class #id 
 
+
+
 ## Making a list
 
 - Something
@@ -204,6 +206,32 @@ When $x$ is 9, $x^2$ is $9^2$, which is $9 \times 9$.
     };
 </script>
 
+<div class="row-fluid">
+  <div class="col-sm-4">
+    <form class="well">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="sex">Choose Sex</label>
+        <div>
+          <select id="sex"><option value="Male" selected>Male</option>
+<option value="Female">Female</option></select>
+          <script type="application/json" data-for="sex" data-nonempty="">{}</script>
+        </div>
+      </div>
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="type">Choose Type</label>
+        <div>
+          <select id="type"><option value="multiBarChart" selected>multiBarChart</option>
+<option value="multiBarHorizontalChart">multiBarHorizontalChart</option></select>
+          <script type="application/json" data-for="type" data-nonempty="">{}</script>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-8">
+    <div id="nvd3plot" class="shiny-html-output nvd3 rChart"></div>
+  </div>
+</div>
+
 --- &interactive
 ## Interactive console chart - google charts
 
@@ -216,9 +244,10 @@ print(M1, tag = 'chart')</textarea>
 ---
 
 ## Interactive chart - Plot.Ly
+A bit slow to load...
 
 
 
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~mparam83/14.embed?share_key=jfRsrcGEtejXuix1Ej7fJi"></iframe>
 
-
+` # to compile the slidedeck, use runDeck(). To publish, use publish_github'
