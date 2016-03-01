@@ -3,7 +3,7 @@ title       : Practising slidify
 subtitle    : 
 author      : Meenakshi Parameshwaran
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, landslide, Slidy ...}
+framework   : io2012       # {io2012, html5slides, shower, dzslides, landslide, Slidy ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax, quiz, bootstrap, shiny, interactive]
@@ -40,7 +40,7 @@ When $x$ is 9, $x^2$ is $9^2$, which is $9 \times 9$.
 
 ---
 
-## Interactive chart - rCharts
+## Interactive chart - rCharts (controls to follow)
 
 
 <div id = 'chart1' class = 'rChart nvd3'></div>
@@ -233,6 +233,7 @@ When $x$ is 9, $x^2$ is $9^2$, which is $9 \times 9$.
 </div>
 
 --- &interactive
+
 ## Interactive console chart - google charts
 
 Press the play button.
@@ -243,11 +244,26 @@ print(M1, tag = 'chart')</textarea>
 
 ---
 
+## Interactive rMap
+
+
+```r
+require(rMaps)
+ichoropleth(Crime ~ State, data = violent_crime, animate = "Year")
+```
+
+<iframe src=' assets/fig/unnamed-chunk-4-1.html ' scrolling='no' frameBorder='0' seamless class='rChart datamaps ' id=iframe- chart1c068e0dd5 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+---
+
 ## Interactive chart - Plot.Ly
-A bit slow to load...
+
+If slow to load, hit refresh...
 
 
 
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~mparam83/14.embed?share_key=jfRsrcGEtejXuix1Ej7fJi"></iframe>
 
-` # to compile the slidedeck, use runDeck(). To publish, use publish_github'
+---
+
+` # to compile the slidedeck, use runDeck(). To publish, use publish_github `

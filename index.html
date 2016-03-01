@@ -101,7 +101,7 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Interactive chart - rCharts</h2>
+    <h2>Interactive chart - rCharts (controls to follow)</h2>
   </hgroup>
   <article data-timings="">
     <div id = 'chart1' class = 'rChart nvd3'></div>
@@ -346,14 +346,35 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
+    <h2>Interactive rMap</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">require(rMaps)
+ichoropleth(Crime ~ State, data = violent_crime, animate = &quot;Year&quot;)
+</code></pre>
+
+<p><iframe src=' assets/fig/unnamed-chunk-4-1.html ' scrolling='no' frameBorder='0' seamless class='rChart datamaps ' id=iframe- chart1c068e0dd5 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
     <h2>Interactive chart - Plot.Ly</h2>
   </hgroup>
   <article data-timings="">
-    <p>A bit slow to load...</p>
+    <p>If slow to load, hit refresh...</p>
 
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~mparam83/14.embed?share_key=jfRsrcGEtejXuix1Ej7fJi"></iframe>
 
-<p>` # to compile the slidedeck, use runDeck(). To publish, use publish_github&#39;</p>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <article data-timings="">
+    <p><code># to compile the slidedeck, use runDeck(). To publish, use publish_github</code></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -377,7 +398,7 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Interactive chart - rCharts'>
+        data-slide=3 title='Interactive chart - rCharts (controls to follow)'>
          3
       </a>
     </li>
@@ -389,8 +410,20 @@ print(M1, tag = &#39;chart&#39;)</textarea></p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Interactive chart - Plot.Ly'>
+        data-slide=5 title='Interactive rMap'>
          5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Interactive chart - Plot.Ly'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='NA'>
+         7
       </a>
     </li>
   </ul>
